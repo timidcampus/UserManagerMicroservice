@@ -11,7 +11,8 @@ public class User {
 
     private String username;
     private String password;
-    private String email;
+    private String firstname;
+    private String lastname;
 
     public String getId() {
         return this.id;
@@ -25,11 +26,15 @@ public class User {
         return this.password;
     }
 
-    public String getEmail() {
-        return this.email;
+    public String getFirstname() {
+        return this.firstname;
     }
 
-     public void setUsername(String username) {
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -37,21 +42,26 @@ public class User {
         this.password = password;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setFirstname(String email) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public User() {}
 
-    public User(String username, String password, String email) {
+    public User(String username, String password, String firstname, String lastname) {
         this.username = username;
         this.password = password;
-        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
     @Override
     public String toString() {
-        return String.format("Customer[id='%s', username='%s', password='%s', email='%'", id, username, password, email);
+        return String.format("Customer[id='%s', username='%s', password='%s', firstname='%', lastname='%'", id, username, password, firstname, lastname);
     }
 
 }
