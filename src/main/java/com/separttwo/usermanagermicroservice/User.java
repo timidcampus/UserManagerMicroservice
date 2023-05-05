@@ -29,7 +29,6 @@ public class User {
     public String getFirstname() {
         return this.firstname;
     }
-
     public String getLastname() {
         return lastname;
     }
