@@ -17,9 +17,9 @@ public class WebSecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers(new AntPathRequestMatcher("/api/users/register")).permitAll()
-                        .requestMatchers(new AntPathRequestMatcher("/api/users/authenticate")).permitAll()
-                        .requestMatchers(new AntPathRequestMatcher("/api/users/{id}")).permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/car_rental/api/v1/users/register")).permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/car_rental/api/v1/users/authenticate")).permitAll()
+                        .requestMatchers(new AntPathRequestMatcher("/car_rental/api/v1/users/{id}")).permitAll()
                         .anyRequest().authenticated())
                 .httpBasic();
         return http.build();
