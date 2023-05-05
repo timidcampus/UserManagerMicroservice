@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/car_rental/api/v1/users")
 public class UserController {
 
     @Autowired
@@ -24,7 +24,7 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
-    @PostMapping("/authenticate")
+    @PostMapping("/login")
     public ResponseEntity<User> authenticateUser(@RequestBody User loginDetails) {
         User authenticatedUser = userService.authenticateUser(loginDetails.getUsername(), loginDetails.getPassword());
         if (authenticatedUser != null) {
